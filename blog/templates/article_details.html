@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+	<h1>{{post.title}}</h1>
+	<small>By: {{ post.author }} - <a href="{% url 'edit_post' post.pk %}">Edit Post</a></small><br/> - {{ post.pub_date }} - {{ post.timestamp }}<br/><br/>
+	{{ post.body }}
+
+{% endblock %}
